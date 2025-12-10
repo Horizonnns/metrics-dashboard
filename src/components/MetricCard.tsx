@@ -111,11 +111,11 @@ const MetricCard: React.FC<MetricCardProps> = ({
         </div>
 
         <div>
-          <h3 className="text-secondary-600 text-sm font-semibold mb-2 tracking-wide uppercase">
+          <h3 className="text-secondary-600 text-xs sm:text-sm font-semibold mb-2 tracking-wide uppercase">
             {title}
           </h3>
           <div className="flex items-baseline gap-2 mb-3">
-            <div className="text-4xl font-black text-secondary-900 tracking-tight group-hover:scale-105 transition-all duration-300">
+            <div className="text-2xl sm:text-4xl font-black text-secondary-900 tracking-tight group-hover:scale-105 transition-all duration-300">
               {value}
             </div>
           </div>
