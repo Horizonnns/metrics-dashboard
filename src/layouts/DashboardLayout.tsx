@@ -237,29 +237,43 @@ const DashboardLayout: React.FC = () => {
       </aside>
 
       {/* Mobile Sidebar (Drawer) */}
-      {isMobileMenuOpen && (
-        <div className="fixed inset-0 z-50 md:hidden">
-          <div
-            className="absolute inset-0 bg-secondary-900/20 backdrop-blur-sm"
-            onClick={() => setIsMobileMenuOpen(false)}
+      <div
+        className={clsx(
+          "fixed inset-0 z-50 md:hidden transition-opacity duration-300",
+          isMobileMenuOpen
+            ? "opacity-100 pointer-events-auto"
+            : "opacity-0 pointer-events-none"
+        )}
+        aria-hidden={!isMobileMenuOpen}
+      >
+        <div
+          className={clsx(
+            "absolute inset-0 bg-secondary-900/20 backdrop-blur-sm transition-opacity duration-300",
+            isMobileMenuOpen ? "opacity-100" : "opacity-0"
+          )}
+          onClick={() => setIsMobileMenuOpen(false)}
+        />
+        <div
+          className={clsx(
+            "absolute left-0 top-0 bottom-0 w-72 bg-surface shadow-2xl transform transition-transform duration-300 ease-in-out",
+            isMobileMenuOpen ? "translate-x-0" : "-translate-x-full"
+          )}
+        >
+          <SidebarContent
+            bots={bots}
+            selectedBotId={selectedBotId}
+            dispatch={dispatch}
+            setIsModalOpen={setIsModalOpen}
+            setIsMobileMenuOpen={setIsMobileMenuOpen}
           />
-          <div className="absolute left-0 top-0 bottom-0 w-72 bg-surface shadow-2xl transform transition-transform duration-300 ease-in-out">
-            <SidebarContent
-              bots={bots}
-              selectedBotId={selectedBotId}
-              dispatch={dispatch}
-              setIsModalOpen={setIsModalOpen}
-              setIsMobileMenuOpen={setIsMobileMenuOpen}
-            />
-            <button
-              onClick={() => setIsMobileMenuOpen(false)}
-              className="absolute top-4 right-4 p-2 text-secondary-400 hover:text-secondary-900"
-            >
-              <X className="w-6 h-6" />
-            </button>
-          </div>
+          <button
+            onClick={() => setIsMobileMenuOpen(false)}
+            className="absolute top-4 right-4 p-2 text-secondary-400 hover:text-secondary-900"
+          >
+            <X className="w-6 h-6" />
+          </button>
         </div>
-      )}
+      </div>
 
       {/* Main Content */}
       <main className="flex-1 flex flex-col min-w-0 overflow-hidden">
