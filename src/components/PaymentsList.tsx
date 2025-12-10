@@ -62,7 +62,7 @@ const PaymentsList: React.FC<PaymentsListProps> = ({ data }) => {
         </div>
       </div>
 
-      <div className="flex-1 overflow-y-auto pr-2 space-y-2.5 max-h-[280px] custom-scrollbar">
+      <div className="flex-1 overflow-y-auto space-y-2.5 max-h-[280px] custom-scrollbar">
         {payments.length === 0 ? (
           <div className="flex flex-col items-center justify-center py-12 text-center">
             <div className="w-16 h-16 bg-secondary-100 rounded-full flex items-center justify-center mb-3">

@@ -208,7 +208,7 @@ const ToneDistribution: React.FC<ToneDistributionProps> = ({ data }) => {
       </div>
 
       {/* Custom Legend (Scrollable List) */}
-      <div className="mt-4 pr-1 max-h-[200px] overflow-y-auto space-y-2 custom-scrollbar">
+      <div className="mt-4 px-2 max-h-[200px] overflow-y-auto space-y-2 custom-scrollbar">
         {chartData.map((entry, index) => (
           <div
             key={`legend-${index}`}
