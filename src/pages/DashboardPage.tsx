@@ -107,7 +107,7 @@ const DashboardPage: React.FC = () => {
         />
         <MetricCard
           title="Рерайтов"
-          value={rewritesTotal}
+          value={rewritesToday}
           icon={Activity}
           trend={{ value: rewritesToday, label: "сегодня", isPositive: true }}
           color="orange"

@@ -143,9 +143,9 @@ const ToneDistribution: React.FC<ToneDistributionProps> = ({ data }) => {
           <div className="bg-white/80 backdrop-blur-sm px-4 py-3 rounded-2xl border border-secondary-100 shadow-sm">
             <div className="flex items-center justify-between">
               <div>
-                <p className="text-xs text-secondary-500 font-semibold uppercase tracking-wider mb-1">
+                {/* <p className="text-xs text-secondary-500 font-semibold uppercase tracking-wider mb-1">
                   Самый популярный
-                </p>
+                </p> */}
                 <p className="text-lg font-bold text-secondary-900">{topTone.name}</p>
               </div>
               <div className="text-right">
