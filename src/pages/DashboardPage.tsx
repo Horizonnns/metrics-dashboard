@@ -7,7 +7,14 @@ import UsageChart from "../components/UsageChartLine";
 import ToneDistribution from "../components/ToneDistribution";
 import SystemHealth from "../components/SystemHealth";
 import PaymentsList from "../components/PaymentsList";
-import { Users, Activity, CreditCard, AlertTriangle, Loader2 } from "lucide-react";
+import {
+  Users,
+  Activity,
+  CreditCard,
+  AlertTriangle,
+  Loader2,
+  Sparkles,
+} from "lucide-react";
 
 // Type for payment history day data
 interface PaymentDayData {
@@ -97,20 +104,27 @@ const DashboardPage: React.FC = () => {
   return (
     <div className="space-y-6 pb-8 animate-in fade-in slide-in-from-bottom-4 duration-500">
       {/* Top Cards - Metrics */}
-      <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+      <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-5 gap-4 sm:gap-6">
         <MetricCard
           title="Всего пользователей"
-          value={usersTotal}
+          value={usersTotal.toLocaleString()}
           icon={Users}
-          trend={{ value: usersActiveToday, label: "активных сегодня", isPositive: true }}
+          trend={{ value: usersActiveToday, label: "общее количество", isPositive: true }}
           color="blue"
         />
         <MetricCard
-          title="Рерайтов"
-          value={rewritesToday}
+          title="Рерайтов (сегодня)"
+          value={rewritesToday.toLocaleString()}
           icon={Activity}
           trend={{ value: rewritesToday, label: "сегодня", isPositive: true }}
           color="orange"
+        />
+        <MetricCard
+          title="Всего рерайтов"
+          value={rewritesTotal.toLocaleString()}
+          icon={Sparkles}
+          trend={{ value: rewritesToday, label: "всплеск сегодня", isPositive: true }}
+          color="purple"
         />
         <MetricCard
           title="Выручка (30д)"
@@ -125,7 +139,7 @@ const DashboardPage: React.FC = () => {
         />
         <MetricCard
           title="Ошибки"
-          value={errorsTotal}
+          value={errorsTotal.toLocaleString()}
           icon={AlertTriangle}
           trend={{
             value: errorsToday,

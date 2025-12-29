@@ -12,7 +12,7 @@ interface MetricCardProps {
     isPositive: boolean;
     inverse?: boolean; // If true, positive is bad (e.g. errors)
   };
-  color: "blue" | "green" | "orange" | "red";
+  color: "blue" | "green" | "orange" | "red" | "purple" | "indigo";
 }
 
 const MetricCard: React.FC<MetricCardProps> = ({
@@ -54,6 +54,22 @@ const MetricCard: React.FC<MetricCardProps> = ({
       iconText: "text-red-600",
       ring: "ring-red-200",
       glow: "from-red-100/40",
+    },
+    purple: {
+      gradient: "from-purple-500 to-indigo-500",
+      lightBg: "from-purple-50/50 to-indigo-50/30",
+      iconBg: "bg-purple-100",
+      iconText: "text-purple-600",
+      ring: "ring-purple-200",
+      glow: "from-purple-100/40",
+    },
+    indigo: {
+      gradient: "from-indigo-500 to-blue-600",
+      lightBg: "from-indigo-50/50 to-blue-50/30",
+      iconBg: "bg-indigo-100",
+      iconText: "text-indigo-600",
+      ring: "ring-indigo-200",
+      glow: "from-indigo-100/40",
     },
   };
 
