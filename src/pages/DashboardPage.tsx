@@ -1,20 +1,20 @@
-import React from "react";
-import { useSelector } from "react-redux";
-import type { RootState } from "../store/store";
-import { useGetMetricsQuery } from "../store/metricsApi";
-import MetricCard from "../components/MetricCard";
-import UsageChart from "../components/UsageChartLine";
-import ToneDistribution from "../components/ToneDistribution";
-import SystemHealth from "../components/SystemHealth";
-import PaymentsList from "../components/PaymentsList";
 import {
-  Users,
   Activity,
-  CreditCard,
   AlertTriangle,
+  CreditCard,
   Loader2,
   Sparkles,
-} from "lucide-react";
+  Users,
+} from "lucide-react"
+import React from "react"
+import { useSelector } from "react-redux"
+import MetricCard from "../components/MetricCard"
+import PaymentsList from "../components/PaymentsList"
+import SystemHealth from "../components/SystemHealth"
+import ToneDistribution from "../components/ToneDistribution"
+import UsageChart from "../components/UsageChartLine"
+import { useGetMetricsQuery } from "../store/metricsApi"
+import type { RootState } from "../store/store"
 
 // Type for payment history day data
 interface PaymentDayData {
@@ -113,7 +113,7 @@ const DashboardPage: React.FC = () => {
           color="blue"
         />
         <MetricCard
-          title="Рерайтов (сегодня)"
+          title="Рерайтов (сегодня) "
           value={rewritesToday.toLocaleString()}
           icon={Activity}
           trend={{ value: rewritesToday, label: "сегодня", isPositive: true }}
