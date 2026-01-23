@@ -1,5 +1,5 @@
-import React from "react";
-import { Wallet, TrendingUp, ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, TrendingUp, Wallet } from "lucide-react"
+import React from "react"
 
 interface PaymentsListProps {
   data: Record<string, { count: number; totalAmount: number }>;
