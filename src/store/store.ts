@@ -1,6 +1,6 @@
-import { configureStore } from "@reduxjs/toolkit";
-import botsReducer from "./botsSlice";
-import { metricsApi } from "./metricsApi";
+import { configureStore } from "@reduxjs/toolkit"
+import botsReducer from "./botsSlice"
+import { metricsApi } from "./metricsApi"
 
 export const store = configureStore({
   reducer: {
