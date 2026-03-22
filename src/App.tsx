@@ -21,6 +21,7 @@ const AppContent: React.FC = () => {
 					path='/'
 					element={selectedBotId ? <DashboardPage /> : <WelcomePage />}
 				/>
+
 				<Route
 					path='*'
 					element={
