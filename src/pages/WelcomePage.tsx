@@ -82,6 +82,7 @@ const WelcomePage: React.FC = () => {
 							<div className='p-1.5 bg-white/20 rounded-lg'>
 								<Plus className='w-5 h-5' />
 							</div>
+
 							<span className='text-lg'>Добавить первого бота</span>
 						</div>
 					</button>
