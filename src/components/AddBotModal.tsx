@@ -64,7 +64,9 @@ const AddBotModal: React.FC<AddBotModalProps> = ({ isOpen, onClose }) => {
 			<div className='group relative bg-white rounded-[2rem] shadow-2xl w-full max-w-md overflow-hidden animate-in zoom-in-95 slide-in-from-bottom-8 duration-500'>
 				{/* Header with Gradient */}
 				<div className='relative bg-gradient-to-br from-green-500 to-emerald-600 p-8 pb-12 overflow-hidden'>
+
 					<div className='absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full blur-2xl -mr-10 -mt-10'></div>
+					
 					<div className='absolute bottom-0 left-0 w-24 h-24 bg-black/10 rounded-full blur-xl -ml-6 -mb-6'></div>
 
 					<div className='relative z-10 flex items-start justify-between text-white'>
