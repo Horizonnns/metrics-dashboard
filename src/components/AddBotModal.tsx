@@ -74,6 +74,7 @@ const AddBotModal: React.FC<AddBotModalProps> = ({ isOpen, onClose }) => {
 							<div className='p-3 bg-white/20 backdrop-blur-sm rounded-2xl w-fit mb-4 shadow-inner'>
 								<Bot className='w-8 h-8 text-white' />
 							</div>
+							
 							<h3 className='text-2xl font-black tracking-tight mb-1'>
 								Новый бот
 							</h3>
