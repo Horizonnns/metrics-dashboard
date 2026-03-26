@@ -82,6 +82,7 @@ const AddBotModal: React.FC<AddBotModalProps> = ({ isOpen, onClose }) => {
 								Подключите ваш сервис к дашборду
 							</p>
 						</div>
+						
 						<button
 							onClick={onClose}
 							className='text-white/70 hover:text-white hover:bg-white/20 p-2 rounded-xl transition-all duration-200'
