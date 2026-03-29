@@ -129,10 +129,12 @@ const AddBotModal: React.FC<AddBotModalProps> = ({ isOpen, onClose }) => {
 							<label className='text-xs font-bold text-secondary-500 uppercase tracking-wider ml-1'>
 								URL сервера
 							</label>
+							
 							<div className='relative group/input'>
 								<div className='absolute left-4 top-3.5 text-secondary-400 group-focus-within/input:text-green-500 transition-colors'>
 									<Globe className='w-5 h-5' />
 								</div>
+
 								<input
 									type='url'
 									value={url}
