@@ -98,6 +98,7 @@ const MetricCard: React.FC<MetricCardProps> = ({
 						>
 							<Icon className='w-6 h-6 text-white' />
 						</div>
+
 						{/* Pulse effect */}
 						<div
 							className={`absolute inset-0 bg-gradient-to-br ${config.gradient} rounded-2xl animate-ping opacity-20`}
@@ -130,6 +131,7 @@ const MetricCard: React.FC<MetricCardProps> = ({
 					<h3 className='text-secondary-600 text-xs sm:text-sm font-semibold mb-2 tracking-wide uppercase'>
 						{title}
 					</h3>
+
 					<div className='flex items-baseline gap-2 mb-3'>
 						<div className='text-2xl sm:text-4xl font-black text-secondary-900 tracking-tight group-hover:scale-105 transition-all duration-300'>
 							{value}
@@ -144,6 +146,7 @@ const MetricCard: React.FC<MetricCardProps> = ({
 									style={{ width: '75%' }}
 								></div>
 							</div>
+
 							<div className='text-xs text-secondary-500 font-semibold whitespace-nowrap'>
 								{trend.label}
 							</div>
