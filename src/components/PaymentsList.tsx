@@ -117,6 +117,7 @@ const PaymentsList: React.FC<PaymentsListProps> = ({ data }) => {
 												}`}
 											/>
 										</div>
+
 										<div>
 											<p className='text-sm font-bold text-secondary-900'>
 												{payment.date.toLocaleDateString('ru-RU', {
@@ -124,6 +125,7 @@ const PaymentsList: React.FC<PaymentsListProps> = ({ data }) => {
 													month: 'short'
 												})}
 											</p>
+
 											<p className='text-xs text-secondary-500 font-medium'>
 												{payment.count}{' '}
 												{payment.count === 1
@@ -134,6 +136,7 @@ const PaymentsList: React.FC<PaymentsListProps> = ({ data }) => {
 											</p>
 										</div>
 									</div>
+
 									<div className='text-right'>
 										<p
 											className={`text-base font-black ${
@@ -144,6 +147,7 @@ const PaymentsList: React.FC<PaymentsListProps> = ({ data }) => {
 										>
 											₽{payment.totalAmount.toLocaleString()}
 										</p>
+
 										<div className='flex items-center gap-1 justify-end'>
 											<div className='w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse'></div>
 											<p className='text-xs text-green-600 font-bold'>
