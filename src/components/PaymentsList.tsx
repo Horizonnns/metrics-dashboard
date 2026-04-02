@@ -33,6 +33,7 @@ const PaymentsList: React.FC<PaymentsListProps> = ({ data }) => {
 					<div className='p-2 bg-gradient-to-br from-green-500 to-emerald-500 rounded-xl shadow-lg'>
 						<Wallet className='w-5 h-5 text-white' />
 					</div>
+
 					<h3 className='text-xl font-black text-secondary-900 tracking-tight'>
 						История платежей
 					</h3>
@@ -47,6 +48,7 @@ const PaymentsList: React.FC<PaymentsListProps> = ({ data }) => {
 								Всего
 							</p>
 						</div>
+
 						<p className='text-lg font-black bg-gradient-to-r from-green-600 to-emerald-600 bg-clip-text text-transparent'>
 							₽{totalRevenue.toLocaleString()}
 						</p>
@@ -56,6 +58,7 @@ const PaymentsList: React.FC<PaymentsListProps> = ({ data }) => {
 						<p className='text-xs text-secondary-500 font-semibold uppercase tracking-wider mb-1'>
 							Средний чек
 						</p>
+
 						<p className='text-lg font-bold text-secondary-900'>
 							₽{avgPerDay.toLocaleString()}
 						</p>
@@ -69,9 +72,11 @@ const PaymentsList: React.FC<PaymentsListProps> = ({ data }) => {
 						<div className='w-16 h-16 bg-secondary-100 rounded-full flex items-center justify-center mb-3'>
 							<Wallet className='w-8 h-8 text-secondary-400' />
 						</div>
+
 						<p className='text-secondary-500 text-sm font-semibold'>
 							Платежей пока нет
 						</p>
+
 						<p className='text-secondary-400 text-xs mt-1'>
 							История появится после первой транзакции
 						</p>
