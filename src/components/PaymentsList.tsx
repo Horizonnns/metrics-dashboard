@@ -150,6 +150,7 @@ const PaymentsList: React.FC<PaymentsListProps> = ({ data }) => {
 
 										<div className='flex items-center gap-1 justify-end'>
 											<div className='w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse'></div>
+
 											<p className='text-xs text-green-600 font-bold'>
 												{((payment.totalAmount / totalRevenue) * 100).toFixed(
 													0
@@ -171,6 +172,7 @@ const PaymentsList: React.FC<PaymentsListProps> = ({ data }) => {
 						<span className='text-secondary-500 font-medium'>
 							{totalTransactions} транзакций за период
 						</span>
+
 						<span className='text-secondary-600 font-semibold'>30 дней</span>
 					</div>
 				</div>

@@ -141,12 +141,14 @@ const SystemHealth: React.FC<SystemHealthProps> = ({ data }) => {
 		<div className='bg-gradient-to-br from-white via-blue-50/20 to-cyan-50/20 p-6 rounded-3xl shadow-soft border border-secondary-100 relative overflow-hidden'>
 			{/* Decorative background */}
 			<div className='absolute top-0 right-0 w-40 h-40 bg-gradient-to-br from-blue-100/30 to-transparent rounded-full blur-3xl -z-10'></div>
+
 			<div className='absolute bottom-0 left-0 w-32 h-32 bg-gradient-to-tr from-cyan-100/30 to-transparent rounded-full blur-3xl -z-10'></div>
 
 			<div className='flex items-center gap-3 mb-6'>
 				<div className='p-2 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-xl shadow-lg'>
 					<Zap className='w-5 h-5 text-white' />
 				</div>
+
 				<h3 className='text-xl font-black text-secondary-900 tracking-tight'>
 					Состояние системы
 				</h3>
@@ -168,6 +170,7 @@ const SystemHealth: React.FC<SystemHealthProps> = ({ data }) => {
 									<Activity className='w-5 h-5 text-white' />
 								</div>
 							</div>
+
 							<div>
 								<p className='text-sm font-bold text-secondary-900'>Аптайм</p>
 								<p className='text-xs text-secondary-500 font-medium'>
@@ -175,6 +178,7 @@ const SystemHealth: React.FC<SystemHealthProps> = ({ data }) => {
 								</p>
 							</div>
 						</div>
+
 						<div className='text-right'>
 							<p className='text-xl font-black text-secondary-900'>
 								{data.uptime ? formatUptime(data.uptime) : 'N/A'}
