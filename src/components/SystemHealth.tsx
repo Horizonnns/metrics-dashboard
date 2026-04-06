@@ -164,6 +164,7 @@ const SystemHealth: React.FC<SystemHealthProps> = ({ data }) => {
 									percentage={uptimeStatus.percentage}
 									strokeColor={uptimeStatus.ringColor}
 								/>
+
 								<div
 									className={`absolute inset-0 flex items-center justify-center bg-gradient-to-br ${uptimeStatus.bgColor} rounded-full m-2 shadow-md`}
 								>
@@ -183,6 +184,7 @@ const SystemHealth: React.FC<SystemHealthProps> = ({ data }) => {
 							<p className='text-xl font-black text-secondary-900'>
 								{data.uptime ? formatUptime(data.uptime) : 'N/A'}
 							</p>
+
 							<div className='flex items-center gap-1.5 justify-end mt-1'>
 								<div
 									className={`w-2 h-2 rounded-full ${uptimeStatus.color.replace(
@@ -190,6 +192,7 @@ const SystemHealth: React.FC<SystemHealthProps> = ({ data }) => {
 										'bg-'
 									)} animate-pulse`}
 								></div>
+
 								<p
 									className={`text-xs font-bold uppercase tracking-wide ${uptimeStatus.color}`}
 								>
@@ -209,12 +212,14 @@ const SystemHealth: React.FC<SystemHealthProps> = ({ data }) => {
 									percentage={latencyStatus.percentage}
 									strokeColor={latencyStatus.ringColor}
 								/>
+
 								<div
 									className={`absolute inset-0 flex items-center justify-center bg-gradient-to-br ${latencyStatus.bgColor} rounded-full m-2 shadow-md`}
 								>
 									<Clock className='w-5 h-5 text-white' />
 								</div>
 							</div>
+
 							<div>
 								<p className='text-sm font-bold text-secondary-900'>Задержка</p>
 								<p className='text-xs text-secondary-500 font-medium'>
@@ -222,6 +227,7 @@ const SystemHealth: React.FC<SystemHealthProps> = ({ data }) => {
 								</p>
 							</div>
 						</div>
+
 						<div className='text-right'>
 							<p className='text-xl font-black text-secondary-900'>
 								{data.latency}{' '}
@@ -229,6 +235,7 @@ const SystemHealth: React.FC<SystemHealthProps> = ({ data }) => {
 									мс
 								</span>
 							</p>
+
 							<div className='flex items-center gap-1.5 justify-end mt-1'>
 								<div
 									className={`w-2 h-2 rounded-full ${latencyStatus.color.replace(
@@ -236,6 +243,7 @@ const SystemHealth: React.FC<SystemHealthProps> = ({ data }) => {
 										'bg-'
 									)} animate-pulse`}
 								></div>
+
 								<p
 									className={`text-xs font-bold uppercase tracking-wide ${latencyStatus.color}`}
 								>
