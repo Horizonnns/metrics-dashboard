@@ -263,12 +263,14 @@ const SystemHealth: React.FC<SystemHealthProps> = ({ data }) => {
 									percentage={queueStatus.percentage}
 									strokeColor={queueStatus.ringColor}
 								/>
+
 								<div
 									className={`absolute inset-0 flex items-center justify-center bg-gradient-to-br ${queueStatus.bgColor} rounded-full m-2 shadow-md`}
 								>
 									<Database className='w-5 h-5 text-white' />
 								</div>
 							</div>
+
 							<div>
 								<p className='text-sm font-bold text-secondary-900'>Очередь</p>
 								<p className='text-xs text-secondary-500 font-medium'>
@@ -276,6 +278,7 @@ const SystemHealth: React.FC<SystemHealthProps> = ({ data }) => {
 								</p>
 							</div>
 						</div>
+
 						<div className='text-right'>
 							<p className='text-xl font-black text-secondary-900'>
 								{data.queue_size}{' '}
@@ -283,6 +286,7 @@ const SystemHealth: React.FC<SystemHealthProps> = ({ data }) => {
 									задач
 								</span>
 							</p>
+
 							<div className='flex items-center gap-1.5 justify-end mt-1'>
 								<div
 									className={`w-2 h-2 rounded-full ${queueStatus.color.replace(
@@ -290,6 +294,7 @@ const SystemHealth: React.FC<SystemHealthProps> = ({ data }) => {
 										'bg-'
 									)} animate-pulse`}
 								></div>
+
 								<p
 									className={`text-xs font-bold uppercase tracking-wide ${queueStatus.color}`}
 								>
