@@ -80,6 +80,7 @@ const renderActiveShape = (props: unknown) => {
 			>
 				{payload.name}
 			</text>
+
 			<Sector
 				cx={cx}
 				cy={cy}
@@ -90,6 +91,7 @@ const renderActiveShape = (props: unknown) => {
 				fill={fill}
 				opacity={0.8}
 			/>
+
 			<Sector
 				cx={cx}
 				cy={cy}
@@ -136,6 +138,7 @@ const ToneDistribution: React.FC<ToneDistributionProps> = ({ data }) => {
 					<div className='p-2 bg-gradient-to-br from-purple-500 to-blue-500 rounded-xl shadow-lg'>
 						<Sparkles className='w-5 h-5 text-white' />
 					</div>
+
 					<h3 className='text-xl font-black text-secondary-900 tracking-tight'>
 						Популярные тона
 					</h3>
@@ -152,10 +155,12 @@ const ToneDistribution: React.FC<ToneDistributionProps> = ({ data }) => {
 									{topTone.name}
 								</p>
 							</div>
+
 							<div className='text-right'>
 								<p className='text-2xl font-black bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent'>
 									{topTone.value}
 								</p>
+
 								<p className='text-xs text-secondary-500 font-medium'>
 									из {totalCount}
 								</p>
@@ -194,6 +199,7 @@ const ToneDistribution: React.FC<ToneDistributionProps> = ({ data }) => {
 								</linearGradient>
 							))}
 						</defs>
+
 						<Pie
 							{...({
 								activeIndex,
@@ -253,10 +259,12 @@ const ToneDistribution: React.FC<ToneDistributionProps> = ({ data }) => {
 						>
 							{entry.name}
 						</span>
+
 						<div className='flex items-center gap-2'>
 							<span className='text-xs font-medium text-secondary-400'>
 								{((entry.value / totalCount) * 100).toFixed(0)}%
 							</span>
+
 							<span
 								className={`text-sm font-bold min-w-[24px] text-right ${
 									activeIndex === index
