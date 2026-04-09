@@ -26,6 +26,7 @@ const CustomTooltip: React.FC<TooltipProps> = ({ active, payload, label }) => {
 		return (
 			<div className='bg-white px-4 py-3 rounded-xl shadow-lg border border-secondary-100'>
 				<p className='text-xs text-secondary-500 font-medium mb-1'>{label}</p>
+
 				<p className='text-lg font-bold text-secondary-900'>
 					{payload[0].value}{' '}
 					<span className='text-sm font-normal text-secondary-500'>
@@ -57,13 +58,16 @@ const UsageChart: React.FC<UsageChartProps> = ({ data }) => {
 				<h3 className='text-lg font-bold text-secondary-900 tracking-tight'>
 					История использования
 				</h3>
+
 				<div className='flex items-center gap-2'>
 					<div className='w-3 h-3 rounded-full bg-gradient-to-br from-[#009a5c] to-[#38e0a3]'></div>
+
 					<span className='text-xs text-secondary-500 font-medium'>
 						Последние 7 дней
 					</span>
 				</div>
 			</div>
+
 			<div className='h-[300px] w-full'>
 				<ResponsiveContainer
 					width='100%'
@@ -93,12 +97,14 @@ const UsageChart: React.FC<UsageChartProps> = ({ data }) => {
 								/>
 							</linearGradient>
 						</defs>
+
 						<CartesianGrid
 							strokeDasharray='3 3'
 							vertical={false}
 							stroke='#e5e7eb'
 							strokeOpacity={0.5}
 						/>
+
 						<XAxis
 							dataKey='date'
 							axisLine={false}
@@ -106,16 +112,19 @@ const UsageChart: React.FC<UsageChartProps> = ({ data }) => {
 							tick={{ fill: '#6b7280', fontSize: 12, fontWeight: 500 }}
 							dy={10}
 						/>
+
 						<YAxis
 							axisLine={false}
 							tickLine={false}
 							tick={{ fill: '#6b7280', fontSize: 12, fontWeight: 500 }}
 							tickFormatter={value => `${value}`}
 						/>
+
 						<Tooltip
 							content={<CustomTooltip />}
 							cursor={{ fill: '#f9fafb', opacity: 0.5 }}
 						/>
+
 						<Bar
 							dataKey='count'
 							fill='url(#barGradient)'
