@@ -27,14 +27,17 @@ const CustomTooltip: React.FC<TooltipProps> = ({ active, payload, label }) => {
 			<div className='bg-gradient-to-br from-white to-secondary-50 px-5 py-4 rounded-2xl shadow-2xl border-2 border-primary-200 backdrop-blur-sm'>
 				<div className='flex items-center gap-2 mb-2'>
 					<div className='w-2 h-2 rounded-full bg-gradient-to-r from-[#009a5c] to-[#38e0a3] animate-pulse'></div>
+
 					<p className='text-xs text-secondary-600 font-semibold uppercase tracking-wider'>
 						{label}
 					</p>
 				</div>
+
 				<div className='flex items-baseline gap-2'>
 					<p className='text-2xl font-black bg-gradient-to-r from-[#009a5c] to-[#38e0a3] bg-clip-text text-transparent'>
 						{payload[0].value}
 					</p>
+
 					<span className='text-sm font-medium text-secondary-500'>
 						запросов
 					</span>
@@ -67,6 +70,7 @@ const UsageChartLine: React.FC<UsageChartProps> = ({ data }) => {
 		<div className='bg-gradient-to-br from-white via-secondary-50/30 to-primary-50/20 p-6 rounded-3xl shadow-soft border border-secondary-100 relative h-full overflow-hidden'>
 			{/* Decorative background elements */}
 			<div className='absolute top-0 right-0 w-64 h-64 bg-gradient-to-br from-primary-100/20 to-transparent rounded-full blur-3xl -z-10'></div>
+
 			<div className='absolute bottom-0 left-0 w-48 h-48 bg-gradient-to-tr from-green-100/20 to-transparent rounded-full blur-3xl -z-10'></div>
 
 			<div className='flex items-start justify-between mb-6'>
@@ -75,10 +79,12 @@ const UsageChartLine: React.FC<UsageChartProps> = ({ data }) => {
 						<div className='p-2 bg-gradient-to-br from-[#009a5c] to-[#38e0a3] rounded-xl shadow-lg'>
 							<Activity className='w-5 h-5 text-white' />
 						</div>
+
 						<h3 className='text-xl font-black text-secondary-900 tracking-tight'>
 							История использования
 						</h3>
 					</div>
+
 					<div className='flex items-center gap-4 mt-3'>
 						<div className='flex items-center gap-2'>
 							<TrendingUp className='w-4 h-4 text-green-600' />
