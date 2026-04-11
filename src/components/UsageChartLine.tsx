@@ -88,11 +88,14 @@ const UsageChartLine: React.FC<UsageChartProps> = ({ data }) => {
 					<div className='flex items-center gap-4 mt-3'>
 						<div className='flex items-center gap-2'>
 							<TrendingUp className='w-4 h-4 text-green-600' />
+
 							<span className='text-sm font-bold text-secondary-700'>
 								Макс: <span className='text-green-600'>{maxRequests}</span>
 							</span>
 						</div>
+
 						<div className='h-4 w-px bg-secondary-200'></div>
+
 						<span className='text-sm font-medium text-secondary-600'>
 							Среднее:{' '}
 							<span className='font-bold text-secondary-900'>
@@ -101,8 +104,10 @@ const UsageChartLine: React.FC<UsageChartProps> = ({ data }) => {
 						</span>
 					</div>
 				</div>
+
 				<div className='flex items-center gap-2 bg-white px-3 py-2 rounded-xl shadow-sm border border-secondary-100'>
 					<div className='w-2.5 h-2.5 rounded-full bg-gradient-to-r from-[#009a5c] to-[#38e0a3] animate-pulse'></div>
+
 					<span className='text-xs text-secondary-600 font-semibold'>
 						7 дней
 					</span>
@@ -131,6 +136,7 @@ const UsageChartLine: React.FC<UsageChartProps> = ({ data }) => {
 									stopColor='#009a5c'
 									stopOpacity={0.4}
 								/>
+
 								<stop
 									offset='50%'
 									stopColor='#38e0a3'
