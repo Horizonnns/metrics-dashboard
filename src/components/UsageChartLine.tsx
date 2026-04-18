@@ -148,6 +148,7 @@ const UsageChartLine: React.FC<UsageChartProps> = ({ data }) => {
 									stopOpacity={0.05}
 								/>
 							</linearGradient>
+
 							<linearGradient
 								id='strokeGradient'
 								x1='0'
@@ -164,17 +165,20 @@ const UsageChartLine: React.FC<UsageChartProps> = ({ data }) => {
 									stopColor='#38e0a3'
 								/>
 							</linearGradient>
+
 							<filter id='glow'>
 								<feGaussianBlur
 									stdDeviation='3'
 									result='coloredBlur'
 								/>
+
 								<feMerge>
 									<feMergeNode in='coloredBlur' />
 									<feMergeNode in='SourceGraphic' />
 								</feMerge>
 							</filter>
 						</defs>
+
 						<CartesianGrid
 							strokeDasharray='3 3'
 							vertical={false}
