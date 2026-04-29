@@ -1,10 +1,10 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
 import {
-	Navigate,
-	Route,
-	BrowserRouter as Router,
-	Routes
+    Navigate,
+    Route,
+    BrowserRouter as Router,
+    Routes
 } from 'react-router-dom'
 import DashboardLayout from './layouts/DashboardLayout'
 import DashboardPage from './pages/DashboardPage'
